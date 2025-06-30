@@ -1,0 +1,231 @@
+[index.html]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MannCo Vault - Instant TF2 Key Buyer</title>
+  <link rel="icon" href="favicon.ico" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #141414;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background-color: #fefefe;
+      color: #222;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    body.light-mode header {
+      background-color: #f0f0f0;
+    }
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+    nav {
+      background: #222;
+      text-align: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #f0c040;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(#111, #1e1e1e);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      max-width: 1000px;
+    }
+    .box {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 280px;
+      text-align: center;
+    }
+    body.light-mode .box {
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+    .box h3 {
+      color: #f0c040;
+      margin-bottom: 10px;
+    }
+    .box p {
+      color: #bbb;
+    }
+    .price-box input, #btcInput {
+      width: 100px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .price-box button, .toggle-btn {
+      background: #f0c040;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      font-size: 14px;
+      color: #777;
+    }
+    #btcRate {
+      font-size: 16px;
+      color: #f0c040;
+      margin-top: 15px;
+    }
+    .payment-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-weight: bold;
+      background: #f0c040;
+      border: none;
+      cursor: pointer;
+    }
+    .animated-key {
+      width: 60px;
+      height: 60px;
+      background: url('https://wiki.teamfortress.com/w/images/thumb/8/8d/Mann_Co._Supply_Crate_Key.png/250px-Mann_Co._Supply_Crate_Key.png') no-repeat center/contain;
+      animation: float 2s ease-in-out infinite;
+      margin: 0 auto;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+    @media screen and (max-width: 600px) {
+      .actions {
+        flex-direction: column;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="animated-key"></div>
+    <h1>MannCo Vault Bot</h1>
+    <p>Your 24/7 Trusted TF2 Key Buyer — Fast, Safe & Secure</p>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Theme</button>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <section class="hero">
+    <h2>Sell Your TF2 Keys Instantly</h2>
+    <p>We pay <strong>$2.00</strong> per key via <strong>PayPal</strong> or <strong>Bitcoin (BTC)</strong> — send a trade, include your payment details.</p>
+    <div id="btcRate">Loading BTC rate...</div>
+  </section>
+  <div class="actions">
+    <div class="box price-box">
+      <h3>💰 Price Calculator (USD)</h3>
+      <p>How many keys?</p>
+      <input type="number" id="keyCount" min="1" />
+      <button onclick="calcPrice()">Calculate</button>
+      <p id="total"></p>
+    </div>
+    <div class="box">
+      <h3>₿ BTC Estimator</h3>
+      <p>Enter amount in USD:</p>
+      <input type="number" id="btcInput" placeholder="$ amount" />
+      <p id="btcValue"></p>
+    </div>
+    <div class="box">
+      <h3>📬 How To Sell</h3>
+      <p>Send a trade with your TF2 keys.<br>Include your <strong>PayPal email</strong> or <strong>BTC address</strong> in the trade note.</p>
+      <div class="payment-buttons">
+        <button onclick="alert('Use PayPal: paypal.me/yourlink')">💳 PayPal</button>
+        <button onclick="alert('BTC Wallet: 1ExampleBTCaddressHere')">₿ Bitcoin</button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam. <br>
+    Report issues or contact us via <a style="color: #f0c040;" href="support.html">Support</a>
+  </footer>
+  <script>
+    let btcRate = 0;
+
+    function calcPrice() {
+      const keys = parseInt(document.getElementById('keyCount').value);
+      const price = 2.0;
+      if (!isNaN(keys) && keys > 0) {
+        const usd = (keys * price).toFixed(2);
+        document.getElementById('total').innerText = `You will receive $${usd}`;
+        if (btcRate > 0) {
+          document.getElementById('btcValue').innerText = `~ ${(usd / btcRate).toFixed(6)} BTC`;
+        }
+      } else {
+        document.getElementById('total').innerText = '';
+        document.getElementById('btcValue').innerText = '';
+      }
+    }
+
+    async function fetchBTC() {
+      try {
+        const res = await fetch('https://api.coindesk.com/v1/bpi/currentprice/USD.json');
+        const data = await res.json();
+        btcRate = data.bpi.USD.rate_float;
+        document.getElementById('btcRate').innerText = `Current BTC/USD Rate: $${btcRate.toFixed(2)}`;
+      } catch (e) {
+        document.getElementById('btcRate').innerText = 'Unable to load BTC rate.';
+      }
+    }
+
+    document.getElementById('btcInput').addEventListener('input', () => {
+      const usd = parseFloat(document.getElementById('btcInput').value);
+      if (!isNaN(usd) && btcRate > 0) {
+        document.getElementById('btcValue').innerText = `= ${(usd / btcRate).toFixed(6)} BTC`;
+      } else {
+        document.getElementById('btcValue').innerText = '';
+      }
+    });
+
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    fetchBTC();
+    setInterval(fetchBTC, 60000);
+  </script>
+</body>
+</html>
