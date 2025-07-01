@@ -169,16 +169,24 @@
       <p id="btcValue"></p>
     </div>
     <div class="box">
-  <h3>📬 How To Sell</h3>
-  <p>1. Click the button below to send a trade to our <strong>Steam Bot</strong></p>
-  <p>2. Add your <strong>PayPal email</strong> or <strong>BTC wallet address</strong> in the trade message box</p>
-  <div class="payment-buttons">
-    <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade Offer</button>
-    <button onclick="alert('PayPal: paypal.me/yourlink')">💳 PayPal</button>
-    <button onclick="alert('BTC Wallet: 1ExampleBTCaddressHere')">₿ Bitcoin</button>
-  </div>
-</div>
-
+      <h3>📬 How To Sell</h3>
+      <p>1. Click the button below to send a trade to our <strong>Steam Bot</strong></p>
+      <p>2. Add your <strong>PayPal email</strong> or <strong>BTC wallet address</strong> in the trade message box</p>
+      <div class="payment-buttons">
+        <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade Offer</button>
+        <button onclick="window.open('https://steamcommunity.com/profiles/76561199108991354')">🤝 Add Bot as Friend</button>
+        <button onclick="alert('PayPal: paypal.me/yourlink')">💳 PayPal</button>
+        <button onclick="alert('BTC Wallet: 1ExampleBTCaddressHere')">₿ Bitcoin</button>
+      </div>
+    </div>
+    <div class="box">
+      <h3>🤖 How the Bot Works</h3>
+      <p>✅ Add the bot as a friend first.<br>
+         ✅ Send a trade offer with TF2 keys only.<br>
+         ✅ Include your payment email or BTC address in the trade message box.<br>
+         ✅ The bot will automatically accept the offer and pay you promptly.
+      </p>
+    </div>
   </div>
   <footer>
     &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam. <br>
@@ -203,16 +211,15 @@
     }
 
     async function fetchBTC() {
-  try {
-    const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-    const data = await res.json();
-    btcRate = data.bitcoin.usd;
-    document.getElementById('btcRate').innerText = `Current BTC/USD Rate: $${btcRate.toFixed(2)}`;
-  } catch (e) {
-    document.getElementById('btcRate').innerText = 'Unable to load BTC rate.';
-  }
-}
-
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await res.json();
+        btcRate = data.bitcoin.usd;
+        document.getElementById('btcRate').innerText = `Current BTC/USD Rate: $${btcRate.toFixed(2)}`;
+      } catch (e) {
+        document.getElementById('btcRate').innerText = 'Unable to load BTC rate.';
+      }
+    }
 
     document.getElementById('btcInput').addEventListener('input', () => {
       const usd = parseFloat(document.getElementById('btcInput').value);
