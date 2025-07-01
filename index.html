@@ -189,7 +189,7 @@
 
     function calcPrice() {
       const keys = parseInt(document.getElementById('keyCount').value);
-      const price = 2.0;
+      const price = 1.84;
       if (!isNaN(keys) && keys > 0) {
         const usd = (keys * price).toFixed(2);
         document.getElementById('total').innerText = `You will receive $${usd}`;
