@@ -9,6 +9,14 @@
   <!-- Optional: Add TF2-like font -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+  <!-- SEO + Social Media Meta -->
+  <meta name="description" content="Sell your TF2 keys instantly for PayPal or BTC. Fast, safe, 24/7 with MannCo Vault Bot." />
+  <meta property="og:title" content="MannCo Vault - TF2 Key Buyer" />
+  <meta property="og:description" content="Trusted 24/7 TF2 Key buyer. Get instant cash or crypto." />
+  <meta property="og:image" content="https://manncovaultbot.github.io/manncovault-site/preview.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://manncovaultbot.github.io/" />
+
   <style>
     body {
       margin: 0;
@@ -72,6 +80,7 @@
     .hero p {
       font-size: 20px;
       color: #ddd;
+      text-shadow: 1px 1px #000;
     }
 
     .actions {
@@ -102,6 +111,7 @@
     .box p {
       color: #ccc;
       font-size: 16px;
+      text-shadow: 1px 1px #000;
     }
 
     input, button {
@@ -160,6 +170,43 @@
         flex-direction: column;
         padding: 0 10px;
       }
+
+      .payment-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Light mode styles */
+    .light-mode {
+      background-color: #f4f4f4;
+      background-image: none;
+      color: #222;
+    }
+
+    .light-mode header,
+    .light-mode nav,
+    .light-mode footer,
+    .light-mode .box,
+    .light-mode .hero {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #222;
+    }
+
+    .light-mode nav a,
+    .light-mode footer a {
+      color: #d99c27;
+    }
+
+    .light-mode .toggle-btn {
+      background: #333;
+      color: #fff;
+    }
+
+    .light-mode .box p,
+    .light-mode .hero p {
+      color: #222;
+      text-shadow: none;
     }
   </style>
 </head>
