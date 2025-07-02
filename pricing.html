@@ -4,46 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pricing - MannCo Vault</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: #141414;
-      color: #f0f0f0;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #2c2c2c;
+      background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
     }
+
     header {
-      background-color: #1e1e1e;
+      background-color: rgba(66, 28, 28, 0.95);
+      padding: 30px 20px;
       text-align: center;
-      padding: 30px;
+      border-bottom: 4px solid #d99c27;
     }
+
     header h1 {
+      font-size: 42px;
+      margin: 0;
       color: #f0c040;
+      text-shadow: 2px 2px #000;
     }
+
+    header p {
+      font-size: 18px;
+      color: #ddd;
+    }
+
     .container {
-      max-width: 800px;
-      margin: 20px auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 20px;
+      background: rgba(20, 20, 20, 0.85);
+      border-radius: 10px;
+      border: 2px solid #d99c27;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
-    .pricing-table {
-      background-color: #222;
-      padding: 20px;
-      border-radius: 8px;
-      border: 1px solid #333;
-    }
+
     .pricing-table h2 {
       color: #f0c040;
       margin-top: 0;
+      font-size: 26px;
     }
+
     .pricing-table p {
-      font-size: 16px;
+      font-size: 18px;
+      color: #ccc;
+      margin: 10px 0;
+      text-shadow: 1px 1px #000;
     }
+
+    a {
+      color: #f0c040;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #111;
+      background-color: rgba(34, 17, 17, 0.95);
       font-size: 14px;
-      color: #777;
+      color: #aaa;
+      border-top: 4px solid #d99c27;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      .container {
+        margin: 20px 10px;
+        padding: 15px;
+      }
+
+      .pricing-table p {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -52,15 +100,15 @@
     <h1>💲 Key Pricing</h1>
     <p>Current rates for selling TF2 keys to MannCo Vault</p>
   </header>
-  <div class="container">
-    <div class="pricing-table">
-      <h2>Buying Price</h2>
-      <p><strong>1.84 USD</strong> per TF2 key via PayPal or BTC</p>
-      <p>💱 Live BTC rate shown on <a href="index.html" style="color: #f0c040;">Home</a> page</p>
-      <p>📌 Payments made within 1–3 minutes after trade confirmation</p>
-      <p>⚠️ Only Mann Co. Supply Crate Keys are accepted</p>
-    </div>
+
+  <div class="container pricing-table">
+    <h2>Buying Price</h2>
+    <p><strong>1.84 USD</strong> per TF2 key via PayPal or BTC</p>
+    <p>💱 Live BTC rate shown on our <a href="index.html">Home</a> page</p>
+    <p>📌 Payments made within 1–3 minutes after trade confirmation</p>
+    <p>⚠️ Only Mann Co. Supply Crate Keys are accepted</p>
   </div>
+
   <footer>
     &copy; 2025 MannCo Vault — Pricing subject to change based on market trends.
   </footer>
