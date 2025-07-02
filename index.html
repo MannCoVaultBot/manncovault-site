@@ -7,12 +7,20 @@
   <link rel="icon" href="favicon.ico" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #141414;
-      color: #fff;
-      transition: background 0.3s, color 0.3s;
-    }
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #141414;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url('https://cdn.cloudflare.steamstatic.com/apps/tf2/images/blog/EotlLaunch/02.jpg'),
+    url('https://wiki.teamfortress.com/w/images/thumb/8/8d/Mann_Co._Supply_Crate_Key.png/250px-Mann_Co._Supply_Crate_Key.png');
+  background-blend-mode: overlay;
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: cover, 200px, 100px;
+  background-attachment: fixed;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
     body.light-mode {
       background-color: #fefefe;
       color: #222;
@@ -173,15 +181,15 @@
       <p>1. Click the button below to send a trade to our <strong>Steam Bot</strong></p>
       <p>2. Add your <strong>PayPal email</strong> or <strong>BTC wallet address</strong> in the trade message box</p>
       <div class="payment-buttons">
-        <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade Offer</button>
-        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot/')">🤝 Add Bot as Friend</button>
+        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot/')">🚀 Send Trade Offer</button>
+        <button onclick="window.open('https://steamcommunity.com/profiles/76561199108991354')">🤝 Add Bot as Friend</button>
         <button onclick="alert('PayPal: paypal.me/yourlink')">💳 PayPal</button>
         <button onclick="alert('BTC Wallet: 1ExampleBTCaddressHere')">₿ Bitcoin</button>
       </div>
     </div>
     <div class="box">
       <h3>🤖 How the Bot Works</h3>
-      <p>✅ Add the Steam bot as a friend first.<br>
+      <p>✅ Add the bot as a friend first.<br>
          ✅ Send a trade offer with TF2 keys only.<br>
          ✅ Include your payment email or BTC address in the trade message box.<br>
          ✅ The bot will automatically accept the offer and pay you promptly.
