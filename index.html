@@ -7,60 +7,70 @@
   <link rel="icon" href="favicon.ico" />
   <style>
     body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #141414;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-    url('https://cdn.cloudflare.steamstatic.com/apps/tf2/images/blog/EotlLaunch/02.jpg'),
-    url('https://wiki.teamfortress.com/w/images/thumb/8/8d/Mann_Co._Supply_Crate_Key.png/250px-Mann_Co._Supply_Crate_Key.png');
-  background-blend-mode: overlay;
-  background-repeat: no-repeat, repeat, repeat;
-  background-size: cover, 200px, 100px;
-  background-attachment: fixed;
-  color: #fff;
-  transition: background 0.3s, color 0.3s;
-}
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #141414;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        url('tf2-trading-background.png');
+      background-blend-mode: overlay;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+
     body.light-mode {
       background-color: #fefefe;
       color: #222;
     }
+
     header {
       background-color: #1e1e1e;
       padding: 30px 20px;
       text-align: center;
     }
+
     body.light-mode header {
       background-color: #f0f0f0;
     }
+
     header h1 {
       font-size: 36px;
       margin: 0;
     }
+
     nav {
       background: #222;
       text-align: center;
       padding: 10px;
     }
+
     nav a {
       color: #f0c040;
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
     }
+
     .hero {
       background: linear-gradient(#111, #1e1e1e);
       padding: 40px 20px;
       text-align: center;
     }
+
     .hero h2 {
       font-size: 28px;
       margin-bottom: 10px;
     }
+
     .hero p {
       font-size: 18px;
       color: #ccc;
     }
+
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -69,6 +79,7 @@
       margin: 40px auto;
       max-width: 1000px;
     }
+
     .box {
       background: #1f1f1f;
       border: 1px solid #333;
@@ -77,24 +88,31 @@
       flex: 1 1 280px;
       text-align: center;
     }
+
     body.light-mode .box {
       background: #fff;
       border: 1px solid #ddd;
     }
+
     .box h3 {
       color: #f0c040;
       margin-bottom: 10px;
     }
+
     .box p {
       color: #bbb;
     }
-    .price-box input, #btcInput {
+
+    .price-box input,
+    #btcInput {
       width: 100px;
       padding: 10px;
       font-size: 16px;
       margin-top: 10px;
     }
-    .price-box button, .toggle-btn {
+
+    .price-box button,
+    .toggle-btn {
       background: #f0c040;
       color: #000;
       border: none;
@@ -103,6 +121,7 @@
       font-weight: bold;
       margin-top: 10px;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -110,11 +129,13 @@
       font-size: 14px;
       color: #777;
     }
+
     #btcRate {
       font-size: 16px;
       color: #f0c040;
       margin-top: 15px;
     }
+
     .payment-buttons button {
       margin: 5px;
       padding: 10px 20px;
@@ -123,6 +144,7 @@
       border: none;
       cursor: pointer;
     }
+
     .animated-key {
       width: 60px;
       height: 60px;
@@ -130,11 +152,19 @@
       animation: float 2s ease-in-out infinite;
       margin: 0 auto;
     }
+
     @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
+
     @media screen and (max-width: 600px) {
       .actions {
         flex-direction: column;
