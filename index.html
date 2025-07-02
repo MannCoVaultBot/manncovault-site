@@ -11,7 +11,7 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #141414;
       background-image:
-        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
       background-blend-mode: overlay;
       background-repeat: no-repeat;
@@ -154,9 +154,15 @@
     }
 
     @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
 
     @media screen and (max-width: 600px) {
