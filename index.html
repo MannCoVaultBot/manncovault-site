@@ -3,46 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MannCo Vault - Instant TF2 Key Buyer</title>
+  <title>MannCo Vault - TF2 Key Buyer</title>
   <link rel="icon" href="favicon.ico" />
+
+  <!-- Optional: Add TF2-like font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #141414;
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #2c2c2c;
       background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
       color: #fff;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    body.light-mode {
-      background-color: #fefefe;
-      color: #222;
     }
 
     header {
-      background-color: rgba(30, 30, 30, 0.85);
+      background-color: rgba(66, 28, 28, 0.95);
       padding: 30px 20px;
       text-align: center;
-    }
-
-    body.light-mode header {
-      background-color: #f0f0f0;
+      border-bottom: 4px solid #d99c27;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 48px;
       margin: 0;
+      color: #f0c040;
+      text-shadow: 2px 2px #000;
     }
 
     nav {
-      background: rgba(34, 34, 34, 0.85);
-      text-align: center;
+      background: rgba(51, 26, 26, 0.9);
       padding: 10px;
+      text-align: center;
     }
 
     nav a {
@@ -50,22 +47,31 @@
       text-decoration: none;
       margin: 0 20px;
       font-weight: bold;
+      font-size: 18px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
     }
 
     .hero {
-      background-color: rgba(17, 17, 17, 0.85);
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 40px 20px;
       text-align: center;
+      border-top: 4px solid #333;
+      border-bottom: 4px solid #333;
     }
 
     .hero h2 {
-      font-size: 28px;
+      font-size: 36px;
+      color: #ffd700;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 18px;
-      color: #ccc;
+      font-size: 20px;
+      color: #ddd;
     }
 
     .actions {
@@ -74,77 +80,70 @@
       justify-content: center;
       gap: 20px;
       margin: 40px auto;
-      max-width: 1000px;
+      max-width: 1100px;
     }
 
     .box {
-      background: rgba(31, 31, 31, 0.85);
-      border: 1px solid #333;
+      background: rgba(20, 20, 20, 0.85);
+      border: 2px solid #d99c27;
       border-radius: 10px;
       padding: 20px;
-      flex: 1 1 280px;
+      flex: 1 1 300px;
       text-align: center;
-    }
-
-    body.light-mode .box {
-      background: #fff;
-      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
     .box h3 {
-      color: #f0c040;
+      color: #ffcc33;
       margin-bottom: 10px;
+      font-size: 22px;
     }
 
     .box p {
-      color: #bbb;
+      color: #ccc;
+      font-size: 16px;
     }
 
-    .price-box input,
-    #btcInput {
-      width: 100px;
+    input, button {
+      margin-top: 10px;
       padding: 10px;
       font-size: 16px;
-      margin-top: 10px;
+      font-family: inherit;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .price-box input, #btcInput {
+      width: 100px;
+      text-align: center;
     }
 
     .price-box button,
-    .toggle-btn {
+    .toggle-btn,
+    .payment-buttons button {
       background: #f0c040;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
+      color: #222;
       font-weight: bold;
-      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .payment-buttons button:hover {
+      background: #ffd700;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(17, 17, 17, 0.85);
+      background-color: rgba(34, 17, 17, 0.95);
       font-size: 14px;
-      color: #777;
-    }
-
-    #btcRate {
-      font-size: 16px;
-      color: #f0c040;
-      margin-top: 15px;
-    }
-
-    .payment-buttons button {
-      margin: 5px;
-      padding: 10px 20px;
-      font-weight: bold;
-      background: #f0c040;
-      border: none;
-      cursor: pointer;
+      color: #aaa;
+      border-top: 4px solid #d99c27;
     }
 
     .animated-key {
-      width: 60px;
-      height: 60px;
+      width: 64px;
+      height: 64px;
       background: url('https://wiki.teamfortress.com/w/images/thumb/8/8d/Mann_Co._Supply_Crate_Key.png/250px-Mann_Co._Supply_Crate_Key.png') no-repeat center/contain;
       animation: float 2s ease-in-out infinite;
       margin: 0 auto;
@@ -164,13 +163,15 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="animated-key"></div>
     <h1>MannCo Vault Bot</h1>
-    <p>Your 24/7 Trusted TF2 Key Buyer — Fast, Safe & Secure</p>
+    <p style="color: #ddd;">Your 24/7 Trusted TF2 Key Buyer — Fast, Safe & Secure</p>
     <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Theme</button>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="commands.html">Commands</a>
@@ -178,49 +179,55 @@
     <a href="faq.html">FAQ</a>
     <a href="support.html">Support</a>
   </nav>
+
   <section class="hero">
     <h2>Sell Your TF2 Keys Instantly</h2>
-    <p>We pay <strong>$1.84</strong> per key via <strong>PayPal</strong> or <strong>Bitcoin (BTC)</strong> — send a trade, include your payment details.</p>
+    <p>We pay <strong>$1.84</strong> per key via <strong>PayPal</strong> or <strong>Bitcoin (BTC)</strong>. Just send a trade and include your payment details.</p>
     <div id="btcRate">Loading BTC rate...</div>
   </section>
+
   <div class="actions">
     <div class="box price-box">
-      <h3>💰 Price Calculator (USD)</h3>
+      <h3>💰 Price Calculator</h3>
       <p>How many keys?</p>
       <input type="number" id="keyCount" min="1" />
       <button onclick="calcPrice()">Calculate</button>
       <p id="total"></p>
     </div>
+
     <div class="box">
       <h3>₿ BTC Estimator</h3>
-      <p>Enter amount in USD:</p>
+      <p>Enter USD Amount:</p>
       <input type="number" id="btcInput" placeholder="$ amount" />
       <p id="btcValue"></p>
     </div>
+
     <div class="box">
-      <h3>📬 How To Sell</h3>
-      <p>1. Click the button below to send a trade to our <strong>Steam Bot</strong></p>
-      <p>2. Add your <strong>PayPal email</strong> or <strong>BTC wallet address</strong> in the trade message box</p>
+      <h3>📬 How to Sell</h3>
+      <p>1. Send a trade to our <strong>Steam Bot</strong></p>
+      <p>2. Include your PayPal or BTC wallet in the trade message</p>
       <div class="payment-buttons">
-        <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade Offer</button>
-        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot')">🤝 Add Bot as Friend</button>
-        <button onclick="alert('PayPal: ExamplePPemail.com')">💳 PayPal</button>
-        <button onclick="alert('BTC Wallet: 1ExampleBTCaddressHere')">₿ Bitcoin</button>
+        <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade</button>
+        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot')">🤝 Add Bot</button>
+        <button onclick="alert('PayPal: your@email.com')">💳 PayPal</button>
+        <button onclick="alert('BTC Wallet: 1yourBTCaddress')">₿ Bitcoin</button>
       </div>
     </div>
+
     <div class="box">
-      <h3>🤖 How the Bot Works</h3>
-      <p>✅ Add the bot as a friend first.<br>
-         ✅ Send a trade offer with TF2 keys only.<br>
-         ✅ Include your payment email or BTC address in the trade message box.<br>
-         ✅ The bot will automatically accept the offer and pay you promptly.
-      </p>
+      <h3>🤖 Bot Instructions</h3>
+      <p>✅ Add the bot as a friend<br>
+         ✅ Send a trade with TF2 keys only<br>
+         ✅ Include your payment info in the message<br>
+         ✅ Bot auto-accepts & sends payment</p>
     </div>
   </div>
+
   <footer>
-    &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam. <br>
-    Report issues or contact us via <a style="color: #f0c040;" href="support.html">Support</a>
+    &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam. <br />
+    Issues? Contact via <a style="color: #f0c040;" href="support.html">Support</a>
   </footer>
+
   <script>
     let btcRate = 0;
 
