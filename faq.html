@@ -28,6 +28,12 @@
       text-shadow: 2px 2px #000;
     }
 
+    #btcRate {
+      font-size: 18px;
+      color: #fae256;
+      margin-top: 10px;
+    }
+
     nav {
       background-color: #171a21;
       padding: 10px;
@@ -53,6 +59,8 @@
 
     h2 {
       color: #66c0f4;
+      margin-bottom: 30px;
+      font-size: 26px;
     }
 
     .faq {
@@ -61,6 +69,7 @@
 
     .faq h3 {
       color: #fff;
+      font-size: 20px;
     }
 
     .faq p {
@@ -72,12 +81,15 @@
       border-top: 4px solid #66c0f4;
       color: #aaa;
       font-size: 14px;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>MannCo Vault - FAQ</h1>
+    <div id="btcRate">⏳ Fetching BTC price...</div>
   </header>
 
   <nav>
@@ -89,6 +101,8 @@
   </nav>
 
   <main>
+    <h2>❓ Frequently Asked Questions</h2>
+
     <div class="faq">
       <h3>💬 How do I sell keys?</h3>
       <p>Send a trade to our bot and include your PayPal or BTC address in the message. Payment is sent within 1–3 minutes.</p>
@@ -96,7 +110,7 @@
 
     <div class="faq">
       <h3>💰 What is the current price per key?</h3>
-      <p>We buy TF2 keys at $2.00 or equivalent in Bitcoin. You can check our <a href="pricing.html" style="color:#66c0f4;">Pricing</a> page for live BTC rate.</p>
+      <p>We buy TF2 keys at $2.00 or equivalent in Bitcoin. You can check our <a href="pricing.html" style="color:#66c0f4;">Pricing</a> page for the live BTC rate.</p>
     </div>
 
     <div class="faq">
@@ -108,5 +122,21 @@
   <footer>
     &copy; 2025 MannCo Vault | Secure & Trusted TF2 Key Buyer
   </footer>
+
+  <script>
+    async function fetchBTC() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await res.json();
+        const btcRate = data.bitcoin.usd;
+        document.getElementById('btcRate').innerHTML = `₿ 1 BTC = <strong>$${btcRate.toLocaleString()}</strong> USD`;
+      } catch (e) {
+        document.getElementById('btcRate').innerText = '⚠️ Failed to fetch BTC price.';
+      }
+    }
+
+    fetchBTC();
+    setInterval(fetchBTC, 60000); // update every 60 seconds
+  </script>
 </body>
 </html>
