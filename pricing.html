@@ -101,36 +101,43 @@
     <div id="btcRate">⏳ Fetching BTC price...</div>
   </header>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="commands.html">Commands</a>
-  <a href="pricing.html">Pricing</a>
-  <a href="faq.html">FAQ</a>
-  <a href="support.html">Support</a>
-  <a href="terms.html">Terms</a>
-  <a href="privacy.html">Privacy</a>
-</nav> 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
 
   <main>
-    <h2>📊 TF2 Key Buy Prices</h2>
+    <h2>📊 TF2 Key Pricing</h2>
     <table>
       <thead>
         <tr>
           <th>Item</th>
-          <th>Buy Price (USD)</th>
-          <th>Buy Price (BTC)</th>
+          <th>We Buy For (USD)</th>
+          <th>We Buy For (BTC)</th>
+          <th>We Sell For (USD)</th>
+          <th>We Sell For (BTC)</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Mann Co. Supply Crate Key</td>
           <td>$2.00</td>
-          <td id="btc-key-price">Loading...</td>
+          <td id="btc-buy-price">Loading...</td>
+          <td>$2.10</td>
+          <td id="btc-sell-price">Loading...</td>
         </tr>
       </tbody>
     </table>
 
-    <p style="margin-top: 20px; color: #aaa;">Prices are updated in real-time. BTC payout includes a network fee of <strong>0.00001200 BTC (~$1.15)</strong>.</p>
+    <p style="margin-top: 20px; color: #aaa;">
+      BTC prices update live every minute using the current market rate.<br />
+      Note: Bitcoin payments are subject to a network fee of <strong>0.00001200 BTC (~$1.15)</strong>.
+    </p>
   </main>
 
   <footer>
@@ -144,15 +151,17 @@
         const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
         const data = await res.json();
         const btcRate = data.bitcoin.usd;
+
         document.getElementById('btcRate').innerHTML = `₿ 1 BTC = <strong>$${btcRate.toLocaleString()}</strong> USD`;
-        document.getElementById('btc-key-price').innerText = `${(2.00 / btcRate).toFixed(8)} BTC`;
+        document.getElementById('btc-buy-price').innerText = (2.00 / btcRate).toFixed(8) + ' BTC';
+        document.getElementById('btc-sell-price').innerText = (2.10 / btcRate).toFixed(8) + ' BTC';
       } catch (e) {
         document.getElementById('btcRate').innerText = '⚠️ Failed to fetch BTC price.';
       }
     }
 
     fetchBTC();
-    setInterval(fetchBTC, 60000); // update every 60s
+    setInterval(fetchBTC, 60000); // refresh every 60 seconds
   </script>
 </body>
 </html>
