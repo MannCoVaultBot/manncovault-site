@@ -1,135 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commands - MannCo Vault</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MannCo Vault - Commands</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #2c2c2c;
-      background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background-color: #171a21;
+      color: #ccc;
     }
 
     header {
-      background-color: rgba(66, 28, 28, 0.95);
-      padding: 30px 20px;
+      background-color: #1b2838;
+      padding: 20px;
       text-align: center;
-      border-bottom: 4px solid #d99c27;
+      border-bottom: 4px solid #66c0f4;
     }
 
     header h1 {
-      font-size: 42px;
+      font-size: 40px;
       margin: 0;
-      color: #f0c040;
+      color: #66c0f4;
       text-shadow: 2px 2px #000;
     }
 
-    header p {
-      font-size: 18px;
-      color: #ddd;
+    nav {
+      background-color: #171a21;
+      padding: 10px;
+      text-align: center;
     }
 
-    .container {
-      max-width: 900px;
+    nav a {
+      color: #66c0f4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
-      background: rgba(20, 20, 20, 0.85);
+      background-color: #1b2838;
       border-radius: 10px;
-      border: 2px solid #d99c27;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      box-shadow: 0 0 10px rgba(102, 192, 244, 0.2);
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    h2 {
+      color: #66c0f4;
+      border-bottom: 2px solid #66c0f4;
+      padding-bottom: 10px;
     }
 
-    li {
-      background-color: rgba(34, 17, 17, 0.9);
-      border: 1px solid #333;
-      margin-bottom: 12px;
+    .command-box {
+      background: rgba(20, 20, 20, 0.85);
+      border-left: 4px solid #66c0f4;
       padding: 15px 20px;
-      border-radius: 8px;
-      font-size: 18px;
-      color: #f0f0f0;
-      text-shadow: 1px 1px #000;
+      margin-bottom: 20px;
+      border-radius: 6px;
     }
 
-    code {
-      background: #f0c040;
-      color: #222;
-      padding: 4px 8px;
+    .command-box h3 {
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .command-box code {
+      display: block;
+      background: #101822;
+      color: #8f98a0;
+      padding: 10px;
+      margin-top: 5px;
       border-radius: 4px;
       font-family: monospace;
-      font-size: 17px;
-      font-weight: bold;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(34, 17, 17, 0.95);
+      background-color: #1b2838;
       font-size: 14px;
       color: #aaa;
-      border-top: 4px solid #d99c27;
-    }
-
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-
-      li {
-        font-size: 16px;
-        padding: 12px 15px;
-      }
-
-      code {
-        font-size: 16px;
-      }
-
-      .container {
-        margin: 20px 10px;
-      }
+      border-top: 4px solid #66c0f4;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📜 Bot Commands</h1>
-    <p>Type these in chat to interact with the MannCo Vault Bot</p>
+    <h1>MannCo Vault</h1>
+    <p>TF2 Key Bot — Command List</p>
   </header>
-  
-  <nav style="background: rgba(51, 26, 26, 0.9); padding: 10px; text-align: center;">
-  <a href="index.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Home</a>
-  <a href="commands.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Commands</a>
-  <a href="pricing.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Pricing</a>
-  <a href="faq.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">FAQ</a>
-  <a href="support.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Support</a>
-</nav>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+  </nav>
 
-  <div class="container">
-    <ul>
-      <li><code>!help</code> — Show the list of available commands.</li>
-      <li><code>!sell</code> — Get instructions on how to sell keys.</li>
-      <li><code>!prices</code> — Show current key price and rate.</li>
-      <li><code>!priceof [X]</code> — Show USD value for X keys.</li>
-      <li><code>!stock</code> — Show how many TF2 keys bot can buy.</li>
-      <li><code>!support</code> — Contact the bot owner if you need help.</li>
-    </ul>
-  </div>
+  <main>
+    <h2>Bot Commands</h2>
+
+    <div class="command-box">
+      <h3>💵 !sell</h3>
+      <code>!sell</code>
+      <p>Displays the steps to sell your TF2 keys for PayPal or BTC.</p>
+    </div>
+
+    <div class="command-box">
+      <h3>💰 !price</h3>
+      <code>!price</code>
+      <p>Shows the current key price in USD and BTC.</p>
+    </div>
+
+    <div class="command-box">
+      <h3>ℹ️ !rate</h3>
+      <code>!rate</code>
+      <p>Displays the current Bitcoin exchange rate.</p>
+    </div>
+
+    <div class="command-box">
+      <h3>❓ !help</h3>
+      <code>!help</code>
+      <p>Shows available bot commands.</p>
+    </div>
+
+    <div class="command-box">
+      <h3>📬 !status</h3>
+      <code>!status</code>
+      <p>Check if the bot is currently online and accepting trades.</p>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 MannCo Vault — Not affiliated with Valve or Steam. Visit <a style="color: #f0c040;" href="index.html">Home</a>
+    &copy; 2025 MannCo Vault | Not affiliated with Valve. Secure trading with Steam-powered trust.
   </footer>
+
 </body>
 </html>
