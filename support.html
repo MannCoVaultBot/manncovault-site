@@ -28,6 +28,12 @@
       text-shadow: 2px 2px #000;
     }
 
+    #btcRate {
+      font-size: 18px;
+      color: #fae256;
+      margin-top: 10px;
+    }
+
     nav {
       background-color: #171a21;
       padding: 10px;
@@ -53,28 +59,33 @@
 
     h2 {
       color: #66c0f4;
+      margin-bottom: 20px;
+      font-size: 26px;
     }
 
-    .support p {
-      margin: 20px 0;
+    p {
       font-size: 16px;
       line-height: 1.6;
     }
 
-    .support a {
+    a {
       color: #66c0f4;
+      text-decoration: underline;
     }
 
     footer {
       border-top: 4px solid #66c0f4;
       color: #aaa;
       font-size: 14px;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>MannCo Vault - Support</h1>
+    <div id="btcRate">⏳ Fetching BTC price...</div>
   </header>
 
   <nav>
@@ -86,20 +97,36 @@
   </nav>
 
   <main>
-    <section class="support">
-      <h2>📬 Need Help?</h2>
-      <p>If you encountered a problem with a trade or didn't receive payment, don’t worry — we’re here to help.</p>
+    <h2>📩 Contact Us</h2>
+    <p>If you need assistance or have issues with a trade, you can reach us in the following ways:</p>
 
-      <p><strong>Contact us via email:</strong> <a href="mailto:support@manncovault.com">support@manncovault.com</a></p>
+    <ul>
+      <li>📨 Send a message to our <strong>Steam Bot</strong> with the command <code>!support</code></li>
+      <li>📧 Email us at: <a href="mailto:support@manncovault.com">support@manncovault.com</a></li>
+      <li>🔗 Visit our official Steam account: <a href="https://steamcommunity.com/id/MannCoVaultBot" target="_blank">MannCoVaultBot</a></li>
+    </ul>
 
-      <p><strong>Bot not responding?</strong> Try sending a new trade or refreshing Steam.</p>
-
-      <p><strong>Scam Warning:</strong> Only trade with our official bot: <a href="https://steamcommunity.com/id/MannCoVaultBot/" target="_blank">steamcommunity.com/id/MannCoVaultBot</a></p>
-    </section>
+    <p>Support is typically available within a few hours. Please include your Steam username and trade URL for faster assistance.</p>
   </main>
 
   <footer>
-    &copy; 2025 MannCo Vault | Fast & Friendly Support Guaranteed
+    &copy; 2025 MannCo Vault | Secure & Trusted TF2 Key Buyer
   </footer>
+
+  <script>
+    async function fetchBTC() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await res.json();
+        const btcRate = data.bitcoin.usd;
+        document.getElementById('btcRate').innerHTML = `₿ 1 BTC = <strong>$${btcRate.toLocaleString()}</strong> USD`;
+      } catch (e) {
+        document.getElementById('btcRate').innerText = '⚠️ Failed to fetch BTC price.';
+      }
+    }
+
+    fetchBTC();
+    setInterval(fetchBTC, 60000); // update every 60 seconds
+  </script>
 </body>
 </html>
