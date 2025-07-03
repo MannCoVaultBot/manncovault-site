@@ -3,154 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support - MannCo Vault</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Support | MannCo Vault</title>
   <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #2c2c2c;
-      background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fff;
       margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #171a21;
+      color: #ccc;
     }
 
-    header {
-      background-color: rgba(66, 28, 28, 0.95);
+    header, footer {
+      background-color: #1b2838;
+      padding: 20px;
       text-align: center;
-      padding: 30px 20px;
-      border-bottom: 4px solid #d99c27;
+      border-bottom: 4px solid #66c0f4;
     }
 
     header h1 {
-      font-size: 42px;
+      color: #66c0f4;
       margin: 0;
-      color: #f0c040;
+      font-size: 32px;
       text-shadow: 2px 2px #000;
     }
 
-    header p {
-      font-size: 18px;
-      color: #ddd;
+    nav {
+      background-color: #171a21;
+      padding: 10px;
+      text-align: center;
     }
 
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(20, 20, 20, 0.85);
-      border-radius: 10px;
-      border: 2px solid #d99c27;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    }
-
-    .content h2 {
-      color: #f0c040;
-      font-size: 26px;
-    }
-
-    .content p,
-    .content li {
-      color: #ccc;
-      font-size: 18px;
-      line-height: 1.6;
-      text-shadow: 1px 1px #000;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    .contact-box {
-      background-color: rgba(34, 17, 17, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #333;
-      margin-top: 30px;
-    }
-
-    .contact-box h3 {
-      color: #f0c040;
-      font-size: 22px;
-    }
-
-    a {
-      color: #f0c040;
+    nav a {
+      color: #66c0f4;
+      margin: 0 15px;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #66c0f4;
+    }
+
+    .support p {
+      margin: 20px 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .support a {
+      color: #66c0f4;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(34, 17, 17, 0.95);
-      font-size: 14px;
+      border-top: 4px solid #66c0f4;
       color: #aaa;
-      border-top: 4px solid #d99c27;
-    }
-
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-
-      .content {
-        margin: 20px 10px;
-        padding: 15px;
-      }
-
-      .content p,
-      .content li {
-        font-size: 16px;
-      }
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Support Center</h1>
-    <p>Need help? We're here to assist you.</p>
+    <h1>MannCo Vault - Support</h1>
   </header>
 
-  <nav style="background: rgba(51, 26, 26, 0.9); padding: 10px; text-align: center;">
-  <a href="index.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Home</a>
-  <a href="commands.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Commands</a>
-  <a href="pricing.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Pricing</a>
-  <a href="faq.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">FAQ</a>
-  <a href="support.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Support</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+  </nav>
 
+  <main>
+    <section class="support">
+      <h2>📬 Need Help?</h2>
+      <p>If you encountered a problem with a trade or didn't receive payment, don’t worry — we’re here to help.</p>
 
-  <div class="content">
-    <h2>Common Issues</h2>
-    <ul>
-      <li>✅ Trade not accepted yet? Please wait up to 2 minutes.</li>
-      <li>💸 Didn't receive your payment? Make sure your PayPal or BTC address is correct in the trade note.</li>
-      <li>📦 Sent wrong items? Only TF2 keys are accepted and paid for.</li>
-      <li>🔒 Bot offline? Check the status or contact support below.</li>
-    </ul>
+      <p><strong>Contact us via email:</strong> <a href="mailto:support@manncovault.com">support@manncovault.com</a></p>
 
-    <div class="contact-box">
-      <h3>Contact the Owner</h3>
-      <p>For support, suggestions, or partnership:</p>
-      <ul>
-        <li>📧 Email: <a href="mailto:manncovault@gmail.com">manncovault@gmail.com</a></li>
-        <li>💬 Steam: <a href="https://steamcommunity.com/id/ManncoVault/">Add the Owner</a></li>
-        <li>🌐 Discord: manncovault</li>
-      </ul>
-    </div>
-  </div>
+      <p><strong>Bot not responding?</strong> Try sending a new trade or refreshing Steam.</p>
+
+      <p><strong>Scam Warning:</strong> Only trade with our official bot: <a href="https://steamcommunity.com/id/MannCoVaultBot/" target="_blank">steamcommunity.com/id/MannCoVaultBot</a></p>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2025 MannCo Vault | For help, contact us anytime.
+    &copy; 2025 MannCo Vault | Fast & Friendly Support Guaranteed
   </footer>
 </body>
 </html>
