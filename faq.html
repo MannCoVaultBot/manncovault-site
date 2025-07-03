@@ -1,150 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ - MannCo Vault</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | MannCo Vault</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #2c2c2c;
-      background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background-color: #171a21;
+      color: #ccc;
     }
 
-    header {
-      background-color: rgba(66, 28, 28, 0.95);
-      padding: 30px 20px;
+    header, footer {
+      background-color: #1b2838;
+      padding: 20px;
       text-align: center;
-      border-bottom: 4px solid #d99c27;
+      border-bottom: 4px solid #66c0f4;
     }
 
     header h1 {
-      font-size: 42px;
+      color: #66c0f4;
       margin: 0;
-      color: #f0c040;
+      font-size: 32px;
       text-shadow: 2px 2px #000;
     }
 
-    header p {
-      font-size: 18px;
-      color: #ddd;
+    nav {
+      background-color: #171a21;
+      padding: 10px;
+      text-align: center;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(20, 20, 20, 0.85);
-      border-radius: 10px;
-      border: 2px solid #d99c27;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    nav a {
+      color: #66c0f4;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #66c0f4;
     }
 
     .faq {
-      background: rgba(34, 17, 17, 0.9);
-      border: 1px solid #333;
-      border-radius: 8px;
-      padding: 15px 20px;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
 
     .faq h3 {
-      color: #f0c040;
-      font-size: 20px;
+      color: #fff;
     }
 
     .faq p {
-      font-size: 17px;
       color: #ccc;
       line-height: 1.6;
-      text-shadow: 1px 1px #000;
-    }
-
-    a {
-      color: #f0c040;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: rgba(34, 17, 17, 0.95);
-      font-size: 14px;
+      border-top: 4px solid #66c0f4;
       color: #aaa;
-      border-top: 4px solid #d99c27;
-    }
-
-    @media screen and (max-width: 600px) {
-      header h1 {
-        font-size: 32px;
-      }
-
-      .container {
-        margin: 20px 10px;
-        padding: 15px;
-      }
-
-      .faq h3 {
-        font-size: 18px;
-      }
-
-      .faq p {
-        font-size: 15px;
-      }
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>❓ Frequently Asked Questions</h1>
-    <p>Everything you need to know about selling TF2 keys</p>
+    <h1>MannCo Vault - FAQ</h1>
   </header>
 
-  <nav style="background: rgba(51, 26, 26, 0.9); padding: 10px; text-align: center;">
-  <a href="index.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Home</a>
-  <a href="commands.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Commands</a>
-  <a href="pricing.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Pricing</a>
-  <a href="faq.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">FAQ</a>
-  <a href="support.html" style="color: #f0c040; text-decoration: none; margin: 0 20px; font-weight: bold; font-size: 18px; transition: color 0.2s;">Support</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="faq.html">FAQ</a>
+    <a href="support.html">Support</a>
+  </nav>
 
+  <main>
+    <div class="faq">
+      <h3>💬 How do I sell keys?</h3>
+      <p>Send a trade to our bot and include your PayPal or BTC address in the message. Payment is sent within 1–3 minutes.</p>
+    </div>
 
-  <div class="container">
     <div class="faq">
-      <h3>🕒 How fast will I receive my payment?</h3>
-      <p>Typically within 1–3 minutes after the bot accepts your trade and confirms your payment details.</p>
+      <h3>💰 What is the current price per key?</h3>
+      <p>We buy TF2 keys at $2.00 or equivalent in Bitcoin. You can check our <a href="pricing.html" style="color:#66c0f4;">Pricing</a> page for live BTC rate.</p>
     </div>
+
     <div class="faq">
-      <h3>💼 What should I include in my trade offer?</h3>
-      <p>Include your PayPal email or BTC address in the trade message. Only TF2 keys will be paid for.</p>
+      <h3>🔐 Is it safe?</h3>
+      <p>Yes! MannCo Vault has helped hundreds of traders. Our automated bot handles trades securely, with no middleman required.</p>
     </div>
-    <div class="faq">
-      <h3>⚠️ What if I send the wrong items?</h3>
-      <p>The bot only pays for Mann Co. Supply Crate Keys. Other items will not be processed.</p>
-    </div>
-    <div class="faq">
-      <h3>📉 Are prices always the same?</h3>
-      <p>Prices can change depending on market trends. Check the <a href="pricing.html">Pricing</a> page for current rates.</p>
-    </div>
-    <div class="faq">
-      <h3>📬 Who do I contact if I have an issue?</h3>
-      <p>Visit our <a href="support.html">Support</a> page for help or to contact the owner directly.</p>
-    </div>
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 MannCo Vault — Making TF2 key trading safe and simple.
+    &copy; 2025 MannCo Vault | Secure & Trusted TF2 Key Buyer
   </footer>
 </body>
 </html>
