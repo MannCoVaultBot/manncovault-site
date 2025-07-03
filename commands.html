@@ -28,6 +28,12 @@
       text-shadow: 2px 2px #000;
     }
 
+    #btcRate {
+      font-size: 18px;
+      color: #fae256;
+      margin-top: 10px;
+    }
+
     nav {
       background-color: #171a21;
       padding: 10px;
@@ -77,12 +83,15 @@
       border-top: 4px solid #66c0f4;
       color: #aaa;
       font-size: 14px;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>MannCo Vault - Bot Commands</h1>
+    <div id="btcRate">⏳ Fetching BTC price...</div>
   </header>
 
   <nav>
@@ -135,5 +144,21 @@
   <footer>
     &copy; 2025 MannCo Vault | Secure & Trusted TF2 Key Buyer
   </footer>
+
+  <script>
+    async function fetchBTC() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const data = await res.json();
+        const btcRate = data.bitcoin.usd;
+        document.getElementById('btcRate').innerHTML = `₿ 1 BTC = <strong>$${btcRate.toLocaleString()}</strong> USD`;
+      } catch (e) {
+        document.getElementById('btcRate').innerText = '⚠️ Failed to fetch BTC price.';
+      }
+    }
+
+    fetchBTC();
+    setInterval(fetchBTC, 60000); // refresh every 60 seconds
+  </script>
 </body>
 </html>
