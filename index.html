@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MannCo Vault - TF2 Key Buyer</title>
   <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- Optional: Add TF2-like font -->
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
-  <!-- SEO + Social Media Meta -->
   <meta name="description" content="Sell your TF2 keys instantly for PayPal or BTC. Fast, safe, 24/7 with MannCo Vault Bot." />
   <meta property="og:title" content="MannCo Vault - TF2 Key Buyer" />
   <meta property="og:description" content="Trusted 24/7 TF2 Key buyer. Get instant cash or crypto." />
@@ -20,43 +17,43 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Bebas Neue', sans-serif;
-      background-color: #2c2c2c;
-      background-image: url('https://manncovaultbot.github.io/manncovault-site/tf2-background.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      background-color: #171a21;
+      color: #ccc;
     }
 
     header {
-      background-color: rgba(66, 28, 28, 0.95);
-      padding: 30px 20px;
+      background-color: #1b2838;
+      padding: 20px;
       text-align: center;
-      border-bottom: 4px solid #d99c27;
+      border-bottom: 4px solid #66c0f4;
     }
 
     header h1 {
       font-size: 48px;
       margin: 0;
-      color: #f0c040;
+      color: #66c0f4;
       text-shadow: 2px 2px #000;
     }
 
+    header p {
+      font-size: 18px;
+      color: #ddd;
+      margin-top: 10px;
+    }
+
     nav {
-      background: rgba(51, 26, 26, 0.9);
+      background-color: #171a21;
       padding: 10px;
       text-align: center;
     }
 
     nav a {
-      color: #f0c040;
+      color: #66c0f4;
       text-decoration: none;
-      margin: 0 20px;
+      margin: 0 15px;
       font-weight: bold;
-      font-size: 18px;
-      transition: color 0.2s;
+      font-size: 16px;
     }
 
     nav a:hover {
@@ -64,23 +61,47 @@
     }
 
     .hero {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 40px 20px;
+      background-image: url('https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 30px;
+      border-radius: 10px;
       text-align: center;
-      border-top: 4px solid #333;
-      border-bottom: 4px solid #333;
+      margin-bottom: 40px;
+      color: #fff;
+      text-shadow: 2px 2px #000;
     }
 
     .hero h2 {
       font-size: 36px;
-      color: #ffd700;
+      color: #8f6a3b;
       margin-bottom: 10px;
     }
 
     .hero p {
       font-size: 20px;
-      color: #ddd;
-      text-shadow: 1px 1px #000;
+    }
+
+    table {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.05);
+      color: #ccc;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #333;
+    }
+
+    th {
+      background-color: #66c0f4;
+      color: #0e141b;
+      text-shadow: none;
     }
 
     .actions {
@@ -94,129 +115,87 @@
 
     .box {
       background: rgba(20, 20, 20, 0.85);
-      border: 2px solid #d99c27;
-      border-radius: 10px;
+      border: 2px solid #66c0f4;
+      border-radius: 8px;
       padding: 20px;
       flex: 1 1 300px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.4);
     }
 
     .box h3 {
-      color: #ffcc33;
+      color: #66c0f4;
       margin-bottom: 10px;
       font-size: 22px;
     }
 
     .box p {
-      color: #ccc;
       font-size: 16px;
-      text-shadow: 1px 1px #000;
     }
 
     input, button {
       margin-top: 10px;
       padding: 10px;
       font-size: 16px;
-      font-family: inherit;
       border-radius: 4px;
       border: none;
+      font-family: inherit;
     }
 
-    .price-box input, #btcInput {
+    input {
       width: 100px;
       text-align: center;
     }
 
     .price-box button,
-    .toggle-btn,
-    .payment-buttons button {
-      background: #f0c040;
+    .payment-buttons button,
+    .toggle-btn {
+      background: #66c0f4;
       color: #222;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.2s;
     }
 
     .payment-buttons button:hover {
-      background: #ffd700;
+      background: #8f6a3b;
+    }
+
+    .toggle-btn {
+      margin-top: 10px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: rgba(34, 17, 17, 0.95);
+      background-color: #1b2838;
       font-size: 14px;
       color: #aaa;
-      border-top: 4px solid #d99c27;
+      border-top: 4px solid #66c0f4;
     }
 
-    .animated-key {
-      width: 64px;
-      height: 64px;
-      background: url('https://wiki.teamfortress.com/w/images/thumb/8/8d/Mann_Co._Supply_Crate_Key.png/250px-Mann_Co._Supply_Crate_Key.png') no-repeat center/contain;
-      animation: float 2s ease-in-out infinite;
-      margin: 0 auto;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    @media screen and (max-width: 600px) {
-      .actions {
-        flex-direction: column;
-        padding: 0 10px;
-      }
-
-      .payment-buttons button {
-        width: 100%;
-        margin-bottom: 10px;
-      }
-    }
-
-    /* Light mode styles */
-    .light-mode {
-      background-color: #f4f4f4;
-      background-image: none;
-      color: #222;
-    }
-
-    .light-mode header,
-    .light-mode nav,
-    .light-mode footer,
-    .light-mode .box,
-    .light-mode .hero {
-      background-color: rgba(255, 255, 255, 0.95);
-      color: #222;
-    }
-
-    .light-mode nav a,
-    .light-mode footer a {
-      color: #d99c27;
-    }
-
-    .light-mode .toggle-btn {
-      background: #333;
-      color: #fff;
-    }
-
-    .light-mode .box p,
-    .light-mode .hero p {
-      color: #222;
-      text-shadow: none;
+    select {
+      margin-top: 10px;
+      padding: 6px;
+      border-radius: 4px;
+      background-color: #1b2838;
+      color: #ccc;
+      border: 1px solid #66c0f4;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="animated-key"></div>
     <h1>MannCo Vault Bot</h1>
-    <p style="color: #ddd;">Your 24/7 Trusted TF2 Key Buyer — Fast, Safe & Secure</p>
+    <p>Your 24/7 Trusted TF2 Key Buyer — Fast, Safe & Secure</p>
     <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Theme</button>
+    <div>
+      <select id="language-selector" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="zh">简体中文</option>
+        <option value="ja">日本語</option>
+        <option value="es">Español</option>
+        <option value="ru">Русский</option>
+      </select>
+    </div>
   </header>
 
   <nav>
@@ -229,15 +208,32 @@
 
   <section class="hero">
     <h2>Sell Your TF2 Keys Instantly</h2>
-    <p>We pay <strong>$1.84</strong> per key via <strong>PayPal</strong> or <strong>Bitcoin (BTC)</strong>. Just send a trade and include your payment details.</p>
-    <div id="btcRate">Loading BTC rate...</div>
+    <p>We pay <strong>$2.00</strong> per key via PayPal or BTC. Just send a trade and include your payment details.</p>
+    <p><strong>Note:</strong> A BTC transaction fee of <strong>0.00001200 BTC (~$1.15)</strong> applies.</p>
   </section>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Buy Price (USD)</th>
+        <th>Buy Price (BTC)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mann Co. Supply Crate Key</td>
+        <td>$2.00</td>
+        <td id="btc-price">Loading...</td>
+      </tr>
+    </tbody>
+  </table>
 
   <div class="actions">
     <div class="box price-box">
       <h3>💰 Price Calculator</h3>
       <p>How many keys?</p>
-      <input type="number" id="keyCount" min="1" />
+      <input type="number" id="keyCount" min="1" placeholder="Enter keys" />
       <button onclick="calcPrice()">Calculate</button>
       <p id="total"></p>
     </div>
@@ -251,28 +247,26 @@
 
     <div class="box">
       <h3>📬 How to Sell</h3>
-      <p>1. Send a trade to our <strong>Steam Bot</strong></p>
-      <p>2. Include your PayPal or BTC wallet in the trade message</p>
+      <p>1. Send trade to our Steam Bot</p>
+      <p>2. Include PayPal or BTC address in trade message</p>
       <div class="payment-buttons">
         <button onclick="window.open('https://steamcommunity.com/tradeoffer/new/?partner=1548625626&token=nHnET_wK')">🚀 Send Trade</button>
-        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot')">🤝 Add Bot</button>
-        <button onclick="alert('PayPal: your@email.com')">💳 PayPal</button>
-        <button onclick="alert('BTC Wallet: 1yourBTCaddress')">₿ Bitcoin</button>
+        <button onclick="window.open('https://steamcommunity.com/id/MannCoVaultBot/')">🤝 Add Bot</button>
       </div>
     </div>
 
     <div class="box">
       <h3>🤖 Bot Instructions</h3>
-      <p>✅ Add the bot as a friend<br>
-         ✅ Send a trade with TF2 keys only<br>
-         ✅ Include your payment info in the message<br>
-         ✅ Bot auto-accepts & sends payment</p>
+      <p>✅ Add the bot as friend<br>
+         ✅ Send trade with TF2 keys<br>
+         ✅ Add your payment info<br>
+         ✅ Bot auto-accepts & pays fast</p>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam. <br />
-    Issues? Contact via <a style="color: #f0c040;" href="support.html">Support</a>
+    &copy; 2025 MannCo Vault | Not affiliated with Valve. <br />
+    Issues? <a style="color: #66c0f4;" href="support.html">Contact Support</a>
   </footer>
 
   <script>
@@ -280,16 +274,14 @@
 
     function calcPrice() {
       const keys = parseInt(document.getElementById('keyCount').value);
-      const price = 1.84;
-      if (!isNaN(keys) && keys > 0) {
-        const usd = (keys * price).toFixed(2);
-        document.getElementById('total').innerText = `You will receive $${usd}`;
-        if (btcRate > 0) {
-          document.getElementById('btcValue').innerText = `~ ${(usd / btcRate).toFixed(6)} BTC`;
-        }
-      } else {
-        document.getElementById('total').innerText = '';
-        document.getElementById('btcValue').innerText = '';
+      if (isNaN(keys) || keys <= 0) {
+        alert('Enter valid number of keys.');
+        return;
+      }
+      const usd = (keys * 2.00).toFixed(2);
+      document.getElementById('total').innerText = `You will receive $${usd}`;
+      if (btcRate > 0) {
+        document.getElementById('btcValue').innerText = `~ ${(usd / btcRate).toFixed(8)} BTC`;
       }
     }
 
@@ -298,16 +290,16 @@
         const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
         const data = await res.json();
         btcRate = data.bitcoin.usd;
-        document.getElementById('btcRate').innerText = `Current BTC/USD Rate: $${btcRate.toFixed(2)}`;
+        document.getElementById('btc-price').innerText = `${(2.00 / btcRate).toFixed(8)} BTC`;
       } catch (e) {
-        document.getElementById('btcRate').innerText = 'Unable to load BTC rate.';
+        document.getElementById('btc-price').innerText = 'Unavailable';
       }
     }
 
     document.getElementById('btcInput').addEventListener('input', () => {
       const usd = parseFloat(document.getElementById('btcInput').value);
       if (!isNaN(usd) && btcRate > 0) {
-        document.getElementById('btcValue').innerText = `= ${(usd / btcRate).toFixed(6)} BTC`;
+        document.getElementById('btcValue').innerText = `= ${(usd / btcRate).toFixed(8)} BTC`;
       } else {
         document.getElementById('btcValue').innerText = '';
       }
@@ -315,6 +307,18 @@
 
     function toggleMode() {
       document.body.classList.toggle('light-mode');
+      const isLightMode = document.body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLightMode ? 'light' : 'dark');
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-mode');
+    }
+
+    function changeLanguage() {
+      const lang = document.getElementById('language-selector').value;
+      alert(`Language switched to ${lang.toUpperCase()}`);
     }
 
     fetchBTC();
