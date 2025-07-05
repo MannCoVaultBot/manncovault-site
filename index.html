@@ -6,7 +6,6 @@
   <title>MannCo Vault - TF2 Key Buyer</title>
   <link rel="icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
@@ -19,6 +18,7 @@
       padding: 20px;
       text-align: center;
       border-bottom: 4px solid #66c0f4;
+      position: relative;
     }
     header h1 {
       font-size: 48px;
@@ -30,6 +30,11 @@
       font-size: 18px;
       color: #ddd;
       margin-top: 10px;
+    }
+    .steam-login {
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
     nav {
       background-color: #171a21;
@@ -164,14 +169,26 @@
         display: block;
         margin: 10px 0;
       }
+      .steam-login {
+        position: static;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="steam-login">
+      <a href="/auth/steam">
+        <img src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png" alt="Sign in through Steam" style="height: 40px;">
+      </a>
+    </div>
     <h1>MannCo Vault</h1>
     <p>Your Trusted 24/7 TF2 Key Buyer — Fast, Safe, Secure</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="commands.html">Commands</a>
@@ -181,6 +198,7 @@
     <a href="terms.html">Terms</a>
     <a href="privacy.html">Privacy</a>
   </nav>
+
   <section class="hero">
     <h2>Sell Your TF2 Keys Instantly</h2>
     <p>We pay <strong>$2.00</strong> per key via <strong>PayPal</strong> or <strong>Bitcoin (BTC)</strong>.</p>
@@ -207,6 +225,7 @@
       </tbody>
     </table>
   </section>
+
   <div class="actions">
     <div class="box price-box">
       <h3>💰 Price Calculator</h3>
@@ -242,10 +261,12 @@
          ✅ Bot auto-accepts & sends payment</p>
     </div>
   </div>
+
   <footer>
     &copy; 2025 MannCo Vault | Not affiliated with Valve or Steam.<br />
     Contact us via <a style="color: #66c0f4;" href="support.html">Support</a>
   </footer>
+
   <script>
     let btcRate = 0;
     async function fetchBTC() {
